@@ -1,11 +1,54 @@
-# 🔄 Universal File Converter & Media Workstation
+# 🛠️ FileForge: Universal File Converter & Media Workstation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Platform: Windows | Linux | macOS](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-success.svg)](#installation)
 [![Offline: 100% Private](https://img.shields.io/badge/Offline-100%25%20Private-brightgreen.svg)](#features)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Built by Students](https://img.shields.io/badge/Built%20by-Students%20for%20Campus-orange.svg)](#-built-by-students-for-students--join-the-openforge-movement)
 
 A modern, high-performance, terminal-driven file converter and media workstation with native GUI file pickers. Convert documents, presentations, spreadsheets, PDFs, photos, and download media with custom resolution selection—**100% locally and privately with zero data sent to the cloud**.
+
+---
+
+## 🌟 Built by Students, for Students — Join the OpenForge Movement!
+
+> *"Never made an open-source contribution or submitted a Git Pull Request before? You are in the right place!"*
+
+**FileForge** is the founding flagship project of **OpenForge**, a student-led open-source collective. Instead of building toy classroom assignments that get discarded after exams, we are teaming up to create **production-grade, 100% offline, privacy-first tools** that our entire campus uses every day.
+
+We actively welcome contributions from **everyone** — whether you write Python, design desktop interfaces, test on different operating systems, or write documentation!
+
+### 🎯 Choose Your Contribution Quest
+
+No matter your current experience level, there is an open quest waiting for you:
+
+| Domain | What You Can Build / Improve | Difficulty |
+| :--- | :--- | :---: |
+| 🐍 **Python Converters** | Add Markdown-to-PDF (`.md` ➔ `.pdf`), code-to-PDF lab report export with syntax highlighting, or text file utilities. | 🟢 Beginner |
+| 👁️ **OCR & Extraction** | Add local Tesseract OCR to pull editable text & tables from photos of whiteboards and textbook pages. | 🟡 Intermediate |
+| 🎨 **Desktop GUI (Frontend)** | Help build a modern, sleek desktop window (using `CustomTkinter` or `PyQt`) or design terminal ASCII art themes. | 🟢 Beginner |
+| 🪟 **Cross-Platform QA** | Test converters across Windows 10/11, macOS, and Linux laptops. Find edge-case formatting bugs and submit issues. | 🟢 Beginner |
+| 🌐 **Localization** | Translate menu prompts and CLI messages into regional and international languages. | 🟢 Beginner |
+| 📝 **Documentation & Guides** | Improve setup instructions, record demo GIFs, or write tutorials for campus classmates. | 🟢 Beginner |
+
+### 🚀 How to Make Your First Contribution in 3 Minutes
+
+1. **Star this repository** ⭐ at the top right to bookmark the project!
+2. **Find an issue or idea**: Check out our [Open Issues](https://github.com/visweshvaras/FileForge/issues) or pick a quest from the table above.
+3. **Fork & Branch**: Fork the repo to your GitHub, create a new branch (`git switch -c feature/my-cool-feature`), and make your changes.
+4. **Submit a Pull Request**: Submit your PR — our team will review it, guide you through any fixes, and merge your code!
+
+### 🏆 Hall of Contributors
+Every single contribution — whether it's 2 lines of code, a bug report, or a documentation fix — gets permanently honored on this board!
+
+<p align="center">
+  <a href="https://github.com/visweshvaras/FileForge/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=visweshvaras/FileForge" alt="OpenForge Contributors" />
+  </a>
+</p>
+
+<p align="center"><i>Be the next contributor on this board! 🚀</i></p>
 
 ---
 
