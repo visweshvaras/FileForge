@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file-converter"
+version = "1.0.0"
+description = "Universal All-In-One Offline PDF & Media Workstation for Linux, Windows, and macOS"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Vishwa" }
+]
+keywords = [
+    "pdf",
+    "converter",
+    "word-to-pdf",
+    "ppt-to-pdf",
+    "excel-to-pdf",
+    "pdf-tools",
+    "yt-dlp",
+    "media-downloader",
+    "offline"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Environment :: Console",
+    "Topic :: Multimedia",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "pymupdf>=1.24.0",
+    "python-docx>=1.1.0",
+    "python-pptx>=1.0.0",
+    "openpyxl>=3.1.0",
+    "pdf2docx>=0.5.8",
+    "reportlab>=4.0.0",
+    "pillow>=10.0.0",
+    "yt-dlp>=2024.8.0",
+    "mutagen>=1.47.0",
+]
+
+[project.scripts]
+file-converter = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["converters*", "engines*", "ui*", "utils*"]
