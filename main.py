@@ -30,6 +30,7 @@ from ui.terminal_menu import (
 )
 from ui.dialogs import choose_input_files, choose_save_location, choose_directory
 from utils.helper import open_file_or_dir
+from plugins import registry
 from converters import (
     images_to_pdf,
     pdf_to_images,
@@ -687,8 +688,10 @@ def prompt_open(path: str):
 def main():
     while True:
         try:
-            display_menu()
-            choice = input(f"{BOLD}👉 Enter option number [0-16]: {RESET}").strip()
+            extra_categories = registry.build_menu_categories(start_number=17)
+            display_menu(extra_categories=extra_categories)
+            max_opt = 16 + len(registry.plugins)
+            choice = input(f"{BOLD}👉 Enter option number [0-{max_opt}]: {RESET}").strip()
 
             if choice == "1":
                 run_photo_to_pdf()
@@ -725,8 +728,11 @@ def main():
             elif choice == "0" or choice.lower() in ("q", "quit", "exit"):
                 print(f"\n{GREEN}Goodbye! 👋{RESET}\n")
                 break
+            elif registry.get_by_number(choice):
+                plugin = registry.get_by_number(choice)
+                plugin.run()
             else:
-                print(f"\n{YELLOW}Invalid selection '{choice}'. Please choose 0 to 16.{RESET}")
+                print(f"\n{YELLOW}Invalid selection '{choice}'. Please choose 0 to {max_opt}.{RESET}")
 
             input(f"\n{DIM}Press Enter to return to main menu...{RESET}")
             clear_screen()
