@@ -5,6 +5,7 @@
 [![Platform: Windows | Linux | macOS](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-success.svg)](#installation)
 [![Offline: 100% Private](https://img.shields.io/badge/Offline-100%25%20Private-brightgreen.svg)](#features)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![AI Tools Welcome](https://img.shields.io/badge/AI%20%26%20ML%20Tools-100%25%20Welcome-blueviolet.svg)](#-total-creative-freedom--ai-tools-welcome)
 [![Built by Students](https://img.shields.io/badge/Built%20by-Students%20for%20Campus-orange.svg)](#-built-by-students-for-students--join-the-openforge-movement)
 
 A modern, high-performance, terminal-driven file converter and media workstation with native GUI file pickers. Convert documents, presentations, spreadsheets, PDFs, photos, and download media with custom resolution selection—**100% locally and privately with zero data sent to the cloud**.
@@ -17,7 +18,21 @@ A modern, high-performance, terminal-driven file converter and media workstation
 
 **FileForge** is the founding flagship project of **OpenForge**, a student-led open-source collective. Instead of building toy classroom assignments that get discarded after exams, we are teaming up to create **production-grade, 100% offline, privacy-first tools** that our entire campus uses every day.
 
-We actively welcome contributions from **everyone** — whether you write Python, design desktop interfaces, test on different operating systems, or write documentation!
+---
+
+### 🤖 Total Creative Freedom — AI & Machine Learning Tools Welcome!
+
+**Got an idea for an AI tool? Build it here! You have 100% complete creative freedom.** 
+
+There are zero corporate gatekeepers or bureaucratic rules here. Whether you want to:
+* 🎙️ Connect **Offline Whisper** to transcribe recorded audio lectures into lecture notes.
+* 🦙 Integrate **Local LLMs (via Ollama or Llama.cpp)** to summarize 50-page PDF textbooks without internet.
+* 👁️ Build a **Vision AI / OCR** model to solve math formulas and extract tables from blackboard photos.
+* 🧠 Build an **AI flashcard or quiz generator** straight from lecture slides (`.pptx`).
+
+FileForge's modular architecture lets you plug in ANY traditional algorithm or cutting-edge AI model with zero friction. **Your tool, your rules, your code.**
+
+---
 
 ### 🎯 Choose Your Contribution Quest
 
@@ -25,7 +40,8 @@ No matter your current experience level, there is an open quest waiting for you:
 
 | Domain | What You Can Build / Improve | Difficulty |
 | :--- | :--- | :---: |
-| 🐍 **Python Converters** | Add Markdown-to-PDF (`.md` ➔ `.pdf`), code-to-PDF lab report export with syntax highlighting, or text file utilities. | 🟢 Beginner |
+| 🤖 **AI & Smart Utilities** | Plug in local Ollama LLMs, Whisper voice transcription, AI PDF summarizers, or smart quiz generators. | 🚀 Creative / Fun |
+| 🐍 **Python Converters** | Add Markdown-to-PDF (`.md` ➔ `.pdf`), code-to-PDF lab report export with syntax highlighting, or text utilities. | 🟢 Beginner |
 | 👁️ **OCR & Extraction** | Add local Tesseract OCR to pull editable text & tables from photos of whiteboards and textbook pages. | 🟡 Intermediate |
 | 🎨 **Desktop GUI (Frontend)** | Help build a modern, sleek desktop window (using `CustomTkinter` or `PyQt`) or design terminal ASCII art themes. | 🟢 Beginner |
 | 🪟 **Cross-Platform QA** | Test converters across Windows 10/11, macOS, and Linux laptops. Find edge-case formatting bugs and submit issues. | 🟢 Beginner |

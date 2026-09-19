@@ -99,7 +99,7 @@ def main():
     print(" Create a new pluggable tool for FileForge in 10 seconds!")
     print("=" * 65 + "\n")
 
-    tool_name = input("👉 Tool Name (e.g., 'Markdown to PDF', 'Lab Report Formatter'): ").strip()
+    tool_name = input("👉 Tool Name (e.g., 'AI PDF Summarizer', 'Markdown to PDF', 'Whisper Transcriber'): ").strip()
     if not tool_name:
         print("❌ Tool name is required.")
         sys.exit(1)
@@ -110,7 +110,7 @@ def main():
     description = input("👉 Short Description: ").strip() or f"Community tool for {tool_name}"
     author = input("👉 Your GitHub Handle or Name [default: @Contributor]: ").strip() or "@Contributor"
     icon = input("👉 Emoji Icon [default: ⚡]: ").strip() or "⚡"
-    category = input("👉 Category [default: ✨ COMMUNITY EXTENSIONS]: ").strip() or "✨ COMMUNITY EXTENSIONS"
+    category = input("👉 Category [e.g., '🤖 AI & SMART UTILITIES', '✨ COMMUNITY EXTENSIONS']: ").strip() or "✨ COMMUNITY EXTENSIONS"
     
     deps_raw = input("👉 Required pip packages (comma-separated, leave blank if none): ").strip()
     deps = [d.strip() for d in deps_raw.split(",") if d.strip()]
