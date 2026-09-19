@@ -11,7 +11,7 @@
 A modern, high-performance, terminal-driven file converter and media workstation with native GUI file pickers. Convert documents, presentations, spreadsheets, PDFs, photos, and download media with custom resolution selection—**100% locally and privately with zero data sent to the cloud**.
 
 <p align="center">
-  <img src="assets/demo.gif" alt="FileForge Demo in Action" width="800" />
+  <img src="assets/fileforge_demo.gif" alt="FileForge Demo in Action" width="850" />
 </p>
 
 ---
