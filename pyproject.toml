@@ -50,6 +50,7 @@ dependencies = [
     "pillow>=10.0.0",
     "yt-dlp>=2024.8.0",
     "mutagen>=1.47.0",
+    "qrcode>=8.0.0",
 ]
 
 [project.scripts]
@@ -57,4 +58,4 @@ file-converter = "main:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["converters*", "engines*", "ui*", "utils*"]
+include = ["converters*", "engines*", "ui*", "utils*", "plugins*"]

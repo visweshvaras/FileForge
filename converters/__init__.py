@@ -16,6 +16,7 @@ from .pdf_tools import (
     unlock_pdf,
     watermark_pdf
 )
+from .qr_generator import generate_qr_image, generate_qr_pdf
 
 __all__ = [
     "images_to_pdf",
@@ -36,4 +37,6 @@ __all__ = [
     "protect_pdf",
     "unlock_pdf",
     "watermark_pdf",
+    "generate_qr_image",
+    "generate_qr_pdf",
 ]

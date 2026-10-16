@@ -18,6 +18,7 @@ setup(
         "pillow>=10.0.0",
         "yt-dlp>=2024.8.0",
         "mutagen>=1.47.0",
+        "qrcode>=8.0.0",
     ],
     entry_points={
         "console_scripts": [

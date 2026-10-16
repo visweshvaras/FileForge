@@ -99,6 +99,10 @@ Every single contribution — whether it's 2 lines of code, a bug report, or a d
 * **YouTube Music Support**: Automatically strips radio mixes and downloads single tracks cleanly.
 * **Universal Compatibility**: Works with YouTube, SoundCloud, Instagram, Twitter/X, and 1000+ platforms.
 
+### 🔳 Link & Text to QR Code Generator
+* **Dual-Format Output**: Generate crisp QR codes as high-resolution **Images (PNG/JPG)** or print-ready **PDF Documents** with custom headers and link labels.
+* **100% Offline & Private**: Zero cloud APIs or tracking links — generated entirely on your local machine.
+
 ---
 
 ## 🖥️ Cross-Platform GUI File Pickers

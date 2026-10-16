@@ -22,7 +22,9 @@ from converters import (
     ppt_to_pdf,
     pdf_to_ppt,
     excel_to_pdf,
-    pdf_to_excel
+    pdf_to_excel,
+    generate_qr_image,
+    generate_qr_pdf
 )
 
 def run_tests():
@@ -92,7 +94,20 @@ def run_tests():
             assert res["success"], f"PDF to Excel failed: {res.get('error')}"
             print(f"✔ 8. PDF -> Excel passed ({res['count']}, {res['size_bytes']} bytes)")
 
-    print("\n🎉 ALL 8 CONVERTER ENGINES PASSED VERIFICATION!")
+        # 9. Link -> QR Code Image
+        sample_link = "https://github.com/visweshvaras/FileForge?ref=student_tools&format=qr"
+        qr_img_path = os.path.join(tmp, "qr_code.png")
+        generate_qr_image(sample_link, qr_img_path)
+        assert os.path.exists(qr_img_path) and os.path.getsize(qr_img_path) > 500, "QR Image generation failed"
+        print(f"✔ 9. Link -> QR Code Image passed ({os.path.getsize(qr_img_path)} bytes)")
+
+        # 10. Link -> QR Code PDF
+        qr_pdf_path = os.path.join(tmp, "qr_code.pdf")
+        generate_qr_pdf(sample_link, qr_pdf_path, title="FileForge QR Code")
+        assert os.path.exists(qr_pdf_path) and os.path.getsize(qr_pdf_path) > 1000, "QR PDF generation failed"
+        print(f"✔ 10. Link -> QR Code PDF passed ({os.path.getsize(qr_pdf_path)} bytes)")
+
+    print("\n🎉 ALL CONVERTER & GENERATOR ENGINES PASSED VERIFICATION!")
 
 if __name__ == "__main__":
     run_tests()
