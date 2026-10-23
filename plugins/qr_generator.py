@@ -63,17 +63,17 @@ class QrCodeTool(BaseTool):
         # 3. Choose Save Location via native file picker
         if is_pdf:
             default_name = "qrcode.pdf"
-            file_types = [("PDF Document", "*.pdf")]
+            filters = ["*.pdf"]
             title = "Save QR Code as PDF Document"
         else:
             default_name = "qrcode.png"
-            file_types = [("PNG Image", "*.png"), ("JPEG Image", "*.jpg")]
+            filters = ["*.png", "*.jpg", "*.jpeg"]
             title = "Save QR Code as Image"
 
         save_path = choose_save_location(
             title=title,
             default_filename=default_name,
-            file_types=file_types
+            file_filters=filters
         )
 
         if not save_path:

@@ -227,12 +227,24 @@ def choose_save_location(
     title: str = "Save File As",
     default_filename: str = "output.pdf",
     file_filters: Optional[List[str]] = None,
-    default_dir: Optional[str] = None
+    default_dir: Optional[str] = None,
+    **kwargs
 ) -> Optional[str]:
     """
     Pop up native Save As file selection window.
     Returns chosen absolute destination file path.
     """
+    if file_filters is None and "file_types" in kwargs:
+        ft = kwargs["file_types"]
+        if isinstance(ft, list):
+            extracted = []
+            for item in ft:
+                if isinstance(item, tuple) and len(item) > 1:
+                    extracted.extend(item[1].split())
+                elif isinstance(item, str):
+                    extracted.append(item)
+            file_filters = extracted if extracted else None
+
     initial_dir = default_dir or os.path.expanduser("~/Documents")
     suggested_path = os.path.join(initial_dir, default_filename)
 
