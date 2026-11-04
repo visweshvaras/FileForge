@@ -23,7 +23,7 @@ if os.name == 'nt':
 
 BANNER = f"""{CYAN}{BOLD}
 ╔═══════════════════════════════════════════════════════════════════╗
-║         🔄 ALL-IN-ONE OFFLINE PDF & MEDIA WORKSTATION             ║
+║         🛠️  FILEFORGE  •  OPENFORGE STUDENT COLLECTIVE             ║
 ║         High-Performance Offline PDF & Conversion Suite           ║
 ╚═══════════════════════════════════════════════════════════════════╝{RESET}"""
 
@@ -55,14 +55,26 @@ MENU_CATEGORIES = [
 def clear_screen():
     os.system('clear' if os.name == 'posix' else 'cls')
 
-def display_menu():
+def display_menu(extra_categories=None):
     print(BANNER)
-    for category_name, items in MENU_CATEGORIES:
+    all_categories = list(MENU_CATEGORIES)
+    if extra_categories:
+        all_categories.extend(extra_categories)
+
+    for category_name, items in all_categories:
         print(f"\n{BOLD}{category_name}:{RESET}")
         for key, title, desc in items:
-            key_col = MAGENTA if key == "16" else (BLUE if int(key) >= 9 else CYAN)
-            print(f"  {key_col}[{key:>2}]{RESET} {BOLD}{title:<26}{RESET} {DIM}• {desc}{RESET}")
-    print(f"\n  {RED}[ 0]{RESET} {BOLD}{'🚪 Exit':<26}{RESET} {DIM}• Quit the application{RESET}\n")
+            key_num = int(key) if key.isdigit() else 99
+            if key_num >= 17:
+                key_col = GREEN
+            elif key_num == 16:
+                key_col = MAGENTA
+            elif key_num >= 9:
+                key_col = BLUE
+            else:
+                key_col = CYAN
+            print(f"  {key_col}[{key:>2}]{RESET} {BOLD}{title:<28}{RESET} {DIM}• {desc}{RESET}")
+    print(f"\n  {RED}[ 0]{RESET} {BOLD}{'🚪 Exit':<28}{RESET} {DIM}• Quit the application{RESET}\n")
 
 class Spinner:
     def __init__(self, message="Processing..."):
